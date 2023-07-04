@@ -1,3 +1,2 @@
 # SmartBridge Externship Files
-## Anuvrat Singh Nehra
-## 20BCI0066
+## Anuvrat Singh Nehra - 20BCI0066
