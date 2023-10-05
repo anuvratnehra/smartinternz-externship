@@ -1,15 +1,28 @@
+p{
+    font-family: 'Poppins', sans-serif;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 16px;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
     background: linear-gradient(45deg, #f3ec78, #af4261);
     margin: 0;
     padding: 0;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.center{
+    display: grid;
+    place-items: center ;
 }
 
 .container {
+    margin-top: 100px;
+    width: 70%;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 30px;
     border-radius: 10px;
@@ -32,12 +45,12 @@ input[type="url"] {
 
 button {
     display: block;
-    width: 100%;
-    padding: 10px;
+    padding: 15px;
+    margin: 25px;
     background-color: #007BFF;
-    color: #fff;
     border: none;
-    border-radius: 5px;
+    color: white;
+    border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -71,4 +84,28 @@ button:hover {
     font-size: 20px;
     text-align: center;
     color: #007BFF;
+}
+.superouter{
+    margin:0%;
+    padding: 15px;
+    background-color:lightblue;
+    border: none;
+    border-radius: 15px;
+    font-size: 36px;
+    text-align: center;
+}
+.outer{
+    background-color: antiquewhite;
+    border-radius: 15px;
+    border-style: solid;
+    font-size: medium;
+    padding: 15px;
+    margin: 25px;
+    text-align: justify;
+}
+.inner{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
 }

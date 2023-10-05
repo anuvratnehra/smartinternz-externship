@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Comments Prioritizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="center">
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <h1>YouTube Comments Reviewer</h1>
+        <form action="/" method="post">
+            <center><button type="submit"><p>Get the predictions of the video</p></button></center>
+        </form>
+        {% if text %}
+            <div class="superouter">
+                Clustering data
+            {% for data in text %}
+                <div class="outer">
+                {% for line in data%}    
+                    <div class="inner">
+                        {{ line }} <br>
+                    </div>
+                {%endfor%}
+                </div>
+                
+            {%endfor%}
+            </div>
+        {% endif %}
+        {% if ques %}
+            <div class="superouter">
+                Questions Found
+            {% for data in ques %}
+                <div class="outer">
+                {% for line in data%}    
+                    <div class="inner">
+                        {{ line }} <br>
+                    </div>
+                {%endfor%}
+                </div>
+            {%endfor%}
+            </div>
+        {% endif %}
+    </div>
+    </div>
+</body>
+</html>
